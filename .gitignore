@@ -1,0 +1,29 @@
+﻿# Environment / Secrets
+.env
+.env.*
+!.env.example
+
+# Python
+**/__pycache__/
+**/*.py[cod]
+**/.venv/
+**/venv/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+
+# Node / Vite
+**/node_modules/
+**/dist/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
