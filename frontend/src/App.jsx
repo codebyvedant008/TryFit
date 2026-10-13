@@ -4277,6 +4277,7 @@ function App() {
 
             {isEditingProfile && currentUser && (
               <form
+                noValidate
                 onSubmit={handleSaveProfile}
                 style={profileSetupRequired ? {
                   position: "fixed",
