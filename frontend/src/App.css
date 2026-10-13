@@ -4795,3 +4795,188 @@ form:has(.section-kicker) > div {
     font-size: 7px !important;
   }
 }
+
+
+/* =========================================
+   TRYFIT — FINAL DISCOVER CARD POLISH
+   ========================================= */
+
+/* Better desktop layout: prevent cards from
+   becoming too narrow or running off-screen */
+.partner-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 22px !important;
+  align-items: stretch;
+  width: 100%;
+  min-width: 0;
+}
+
+/* Consistent card structure */
+.partner-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  width: 100%;
+  height: 100%;
+  padding: 24px;
+  border-radius: 22px;
+  box-sizing: border-box;
+}
+
+/* Keep names and descriptions readable */
+.partner-card h3 {
+  overflow-wrap: anywhere;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+
+.partner-location {
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.partner-bio {
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+  min-height: 40px;
+}
+
+.partner-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+  margin-bottom: 12px;
+}
+
+.partner-tags span {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+/* Consistent spacing for the match explanation */
+.partner-card > div:has(> strong) {
+  margin-top: 18px !important;
+}
+
+.partner-card > div:has(> strong) > div {
+  row-gap: 8px !important;
+}
+
+/* Make the card action buttons consistent */
+.partner-card .partner-button,
+.partner-card .button-connected {
+  box-sizing: border-box;
+  min-width: 0;
+  min-height: 46px;
+  border-radius: 12px;
+}
+
+/* Keep action groups separated */
+.partner-card > div:has(> button) {
+  gap: 10px !important;
+  margin-top: 12px !important;
+}
+
+/* Tablet */
+@media (min-width: 601px) and (max-width: 1000px) {
+  .partner-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 18px !important;
+  }
+
+  .partner-card {
+    padding: 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .partner-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 16px !important;
+  }
+
+  .partner-card {
+    padding: 20px;
+    border-radius: 18px;
+  }
+
+  .partner-card .partner-button,
+  .partner-card .button-connected {
+    width: 100%;
+    min-height: 46px;
+  }
+}
+
+
+/* Fix spacing and alignment of partner card action buttons */
+.partner-card .partner-card-actions {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) !important;
+  gap: 12px !important;
+  width: 100%;
+  margin-top: 16px !important;
+  padding-top: 0;
+  align-items: stretch;
+}
+
+.partner-card .partner-card-actions > button,
+.partner-card .partner-card-actions .partner-response-actions > button {
+  width: 100% !important;
+  min-width: 0;
+  max-width: 100%;
+  min-height: 48px;
+  margin: 0 !important;
+  box-sizing: border-box;
+}
+
+.partner-card .partner-card-actions .partner-response-actions {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px !important;
+  width: 100%;
+  margin: 0 !important;
+}
+
+.partner-card .partner-card-actions .partner-connect-button {
+  margin-top: 0 !important;
+}
+
+.partner-card .partner-card-actions .partner-view-button {
+  margin-bottom: 0 !important;
+}
+
+@media (max-width: 480px) {
+  .partner-card .partner-card-actions {
+    gap: 12px !important;
+  }
+
+  .partner-card .partner-card-actions > button {
+    min-height: 46px;
+  }
+}
+
+.partner-card .partner-card-actions {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 12px !important;
+  width: 100%;
+  margin-top: 16px;
+}
+
+.partner-card .partner-card-actions > button {
+  width: 100% !important;
+  min-width: 0;
+  min-height: 48px;
+  margin: 0 !important;
+  box-sizing: border-box;
+}
+
+.partner-card .partner-response-actions {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px !important;
+  width: 100%;
+}

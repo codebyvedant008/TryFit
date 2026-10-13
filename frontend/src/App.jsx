@@ -4529,231 +4529,68 @@ if (isAccepted) {
 
 
 
-                    <div style={{ display: "flex", gap: "8px", flexWrap: "wrap", marginTop: "12px" }}>
-                      <button type="button" className="button button-connected" onClick={() => handleOpenProfile(partner)}>
-                        View profile
-                      </button>
-                    </div>
-
-                    {isReceived && connection.status === "pending" ? (
-
-
-
-                      <div
-
-
-
-                        style={{
-
-
-
-                          display: "flex",
-
-
-
-                          gap: "10px",
-
-
-
-                          marginTop: "12px",
-
-
-
-                        }}
-
-
-
-                      >
-
-
-
-                        <button
-
-
-
-                          className="button button-primary"
-
-
-
-                          style={{ flex: 1 }}
-
-
-
-                          disabled={busyPartner === partner.id}
-
-
-
-                          onClick={() =>
-
-
-
-                            handleConnectionResponse(
-
-
-
-                              connection,
-
-
-
-                              "accept",
-
-
-
-                              partner.name
-
-
-
-                            )
-
-
-
-                          }
-
-
-
-                        >
-
-
-
-                          {busyPartner === partner.id
-
-
-
-                            ? "Updating..."
-
-
-
-                            : "✓ Accept"}
-
-
-
-                        </button>
-
-
-
-
-
-
-
-                        <button
-
-
-
-                          className="button button-connected"
-
-
-
-                          style={{ flex: 1 }}
-
-
-
-                          disabled={busyPartner === partner.id}
-
-
-
-                          onClick={() =>
-
-
-
-                            handleConnectionResponse(
-
-
-
-                              connection,
-
-
-
-                              "reject",
-
-
-
-                              partner.name
-
-
-
-                            )
-
-
-
-                          }
-
-
-
-                        >
-
-
-
-                          Reject
-
-
-
-                        </button>
-
-
-
-                      </div>
-
-
-
-                    ) : (
-
-
-
-                      <button
-
-
-
-                        className={
-
-                          isAccepted || (connection && !isRejected)
-
-                            ? "button button-connected"
-
-                            : "button button-primary partner-button"
-
-                        }
-
-                        disabled={
-
-                          isAccepted ||
-
-                          (Boolean(connection) && !isRejected) ||
-
-                          busyPartner === partner.id
-
-                        }
-
-
-
-                        onClick={() => handleConnect(partner)}
-
-
-
-                      >
-
-
-
-                        {busyPartner === partner.id
-
-
-
-                          ? "Sending..."
-
-
-
-                          : buttonText}
-
-
-
-                      </button>
-
-
-
-                    )}
-
-
-
-                  </article>
+                    <div className="partner-card-actions">
+  <button
+    type="button"
+    className="button button-connected partner-view-button"
+    onClick={() => handleOpenProfile(partner)}
+  >
+    View profile
+  </button>
+
+  {isReceived && connection.status === "pending" ? (
+    <div className="partner-response-actions">
+      <button
+        type="button"
+        className="button button-primary"
+        disabled={busyPartner === partner.id}
+        onClick={() =>
+          handleConnectionResponse(
+            connection,
+            "accept",
+            partner.name
+          )
+        }
+      >
+        {busyPartner === partner.id ? "Updating..." : "✓ Accept"}
+      </button>
+
+      <button
+        type="button"
+        className="button button-connected"
+        disabled={busyPartner === partner.id}
+        onClick={() =>
+          handleConnectionResponse(
+            connection,
+            "reject",
+            partner.name
+          )
+        }
+      >
+        Reject
+      </button>
+    </div>
+  ) : (
+    <button
+      type="button"
+      className={
+        isAccepted || (connection && !isRejected)
+          ? "button button-connected partner-connect-button"
+          : "button button-primary partner-connect-button"
+      }
+      disabled={
+        isAccepted ||
+        (Boolean(connection) && !isRejected) ||
+        busyPartner === partner.id
+      }
+      onClick={() => handleConnect(partner)}
+    >
+      {busyPartner === partner.id ? "Sending..." : buttonText}
+    </button>
+  )}
+</div>
+
+                    </article>
 
 
 
