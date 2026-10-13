@@ -4300,3 +4300,498 @@ form:has(.section-kicker) > div {
     font-size: 12px !important;
   }
 }
+/* =========================================================
+   TRYFIT — FINAL MOBILE RESPONSIVE FIX
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  /* ---------- Global ---------- */
+
+  html,
+  body,
+  #root {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .app {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* ---------- Navbar ---------- */
+
+  .navbar {
+    width: 100%;
+    min-height: 64px;
+    height: auto;
+    padding: 10px 14px !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .brand {
+    flex-shrink: 0;
+    font-size: 19px;
+  }
+
+  .nav-links {
+    display: none !important;
+  }
+
+  .navbar > div:last-child {
+    display: flex !important;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 6px !important;
+    min-width: 0;
+  }
+
+  .nav-cta {
+    min-height: 38px;
+    padding: 8px 10px !important;
+    font-size: 11px;
+    white-space: nowrap;
+    border-radius: 10px;
+  }
+
+  /* Hide Get Started duplicate button on very small screens */
+  .navbar > div:last-child .nav-cta:last-child {
+    display: none;
+  }
+
+  /* ---------- Hero ---------- */
+
+  .hero {
+    width: 100%;
+    min-height: 620px !important;
+    padding: 52px 20px 110px !important;
+  }
+
+  .hero-content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .eyebrow {
+    font-size: 10px;
+    letter-spacing: 1.4px;
+    max-width: 100%;
+  }
+
+  .hero h1 {
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(40px, 12vw, 58px) !important;
+    line-height: 0.98;
+    letter-spacing: -2.5px !important;
+    word-break: normal;
+  }
+
+  .hero-content > p {
+    width: 100%;
+    max-width: 340px !important;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .hero-actions {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-actions .button {
+    width: 100%;
+    min-height: 46px;
+    flex: none;
+  }
+
+  .hero-floating-card {
+    left: 20px !important;
+    right: 20px !important;
+    bottom: 20px !important;
+    width: auto;
+    max-width: none;
+  }
+
+  /* ---------- Sections ---------- */
+
+  .section,
+  .discover-section,
+  .community-section,
+  .partner-section {
+    width: 100% !important;
+    max-width: 100%;
+  }
+
+  .section {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .discover-section,
+  .community-section {
+    padding-top: 55px !important;
+    padding-bottom: 60px !important;
+  }
+
+  .section-heading {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .section-heading h2 {
+    width: 100%;
+    font-size: 32px !important;
+    line-height: 1.05;
+    letter-spacing: -1.8px;
+  }
+
+  .section-heading p {
+    max-width: 100%;
+  }
+
+  /* ---------- Stats ---------- */
+
+  .stats-strip {
+    width: 100%;
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px !important;
+    padding: 16px 14px !important;
+  }
+
+  .stats-strip div {
+    min-width: 0;
+  }
+
+  .stats-strip strong {
+    font-size: 14px !important;
+  }
+
+  .stats-strip span {
+    font-size: 8px !important;
+    line-height: 1.2;
+  }
+
+  /* ---------- Preference / Filters ---------- */
+
+  .preference-panel {
+    width: 100%;
+    padding: 16px !important;
+    margin: 0 0 25px;
+    border-radius: 16px;
+  }
+
+  .preference-grid {
+    width: 100%;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 12px;
+  }
+
+  .preference-grid > *,
+  .preference-grid label,
+  .preference-grid select,
+  .preference-grid input {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  /* ---------- Activity Cards ---------- */
+
+  .activity-grid,
+  .partner-grid,
+  .game-grid {
+    width: 100%;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 14px;
+  }
+
+  .activity-card,
+  .partner-card,
+  .game-card {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  /* ---------- Partner Toolbar ---------- */
+
+  .partner-toolbar {
+    width: 100%;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px;
+  }
+
+  .partner-toolbar .category-tabs {
+    width: 100%;
+    display: flex;
+    gap: 7px;
+    overflow-x: auto;
+    padding-bottom: 5px;
+    scrollbar-width: none;
+  }
+
+  .partner-toolbar .category-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .partner-toolbar .category-tab {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+
+  .search-box {
+    width: 100% !important;
+    max-width: 100%;
+  }
+
+  /* ---------- Recommendation / Activity headings ---------- */
+
+  .recommendation-heading,
+  .activity-list-heading {
+    width: 100%;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 10px;
+  }
+
+  /* ---------- Forms ---------- */
+
+  form {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  form input,
+  form select,
+  form textarea {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    font-size: 16px !important;
+  }
+
+  /* Prevent iOS zoom on inputs */
+  input,
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+
+  /* ---------- Profile ---------- */
+
+  .profile-section,
+  .profile-panel {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Override inline profile grid */
+  .profile-panel form > div {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* ---------- Games ---------- */
+
+  .game-form-grid {
+    width: 100%;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 12px;
+  }
+
+  .create-button {
+    width: 100% !important;
+  }
+
+  /* ---------- Buttons ---------- */
+
+  .button {
+    max-width: 100%;
+    min-height: 44px;
+  }
+
+  /* ---------- Chat ---------- */
+
+  .chat-container,
+  .chat-panel,
+  .messages-panel {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .message-input,
+  .chat-input {
+    width: 100%;
+    min-width: 0;
+  }
+
+  /* ---------- Google Login Modal ---------- */
+
+  [role="dialog"] {
+    padding: 14px !important;
+    overflow-y: auto;
+  }
+
+  [role="dialog"] > div {
+    width: 100% !important;
+    max-width: 420px !important;
+    padding: 24px !important;
+    max-height: calc(100vh - 28px);
+    overflow-y: auto;
+  }
+
+  #google-signin-button {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  #google-signin-button iframe {
+    max-width: 100% !important;
+  }
+
+  /* ---------- Safety / Other Modals ---------- */
+
+  .modal,
+  .modal-content {
+    width: calc(100% - 28px) !important;
+    max-width: 420px !important;
+    max-height: calc(100vh - 28px);
+    overflow-y: auto;
+  }
+
+  /* ---------- Final CTA ---------- */
+
+  .final-cta {
+    width: 100%;
+    min-height: 360px !important;
+    padding: 55px 22px !important;
+    overflow: hidden;
+  }
+
+  .final-cta-content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .final-cta h2 {
+    font-size: 42px !important;
+    line-height: 1;
+    letter-spacing: -2px !important;
+  }
+
+  .final-cta p {
+    max-width: 300px;
+  }
+
+  .cta-decoration {
+    right: -25% !important;
+    font-size: 190px !important;
+    opacity: 0.45;
+  }
+
+  /* ---------- Footer ---------- */
+
+  .footer {
+    width: 100%;
+    padding: 24px 18px !important;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    text-align: left;
+  }
+
+  .footer p,
+  .footer > span {
+    font-size: 11px;
+  }
+
+  /* ---------- Toast ---------- */
+
+  .toast {
+    left: 14px !important;
+    right: 14px !important;
+    bottom: 14px !important;
+    width: auto !important;
+    max-width: none !important;
+    font-size: 12px;
+  }
+}
+
+
+/* =========================================================
+   EXTRA SMALL PHONES — 320px–380px
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+  .navbar {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  .brand {
+    font-size: 17px;
+  }
+
+  .nav-cta {
+    padding: 7px 8px !important;
+    font-size: 10px;
+  }
+
+  .hero {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .hero h1 {
+    font-size: 39px !important;
+  }
+
+  .section {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .section-heading h2 {
+    font-size: 29px !important;
+  }
+
+  .stats-strip {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  .stats-strip strong {
+    font-size: 13px !important;
+  }
+
+  .stats-strip span {
+    font-size: 7px !important;
+  }
+}

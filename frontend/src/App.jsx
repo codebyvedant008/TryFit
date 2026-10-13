@@ -15,41 +15,49 @@ import "./App.css";
 
 
 const activities = [
-
-
-
   { id: 1, name: "Running", category: "Cardio", icon: "🏃", duration: "15–30 min", intensity: "Medium", location: "Outdoor", goal: "Fitness", description: "Build stamina and explore your surroundings." },
-
-
-
   { id: 2, name: "Strength Training", category: "Strength", icon: "🏋️", duration: "30–60 min", intensity: "High", location: "Gym", goal: "Muscle building", description: "Build strength with a structured workout." },
-
-
-
   { id: 3, name: "Yoga", category: "Mind & Body", icon: "🧘", duration: "15–30 min", intensity: "Low", location: "Indoor", goal: "Flexibility", description: "Improve mobility, balance, and mindfulness." },
-
-
-
   { id: 4, name: "Cycling", category: "Cardio", icon: "🚴", duration: "30–60 min", intensity: "Medium", location: "Outdoor", goal: "Fitness", description: "Get moving with a refreshing cycling session." },
-
-
-
-  { id: 5, name: "Swimming", category: "Sports", icon: "🏊", duration: "30–60 min", intensity: "Medium", location: "Indoor", goal: "Fitness", description: "A full-body workout in the water." },
-
-
-
-  { id: 6, name: "Badminton", category: "Sports", icon: "🏸", duration: "30–60 min", intensity: "High", location: "Indoor", goal: "Social", description: "Play, compete, and meet new people." },
-
-
-
-  { id: 7, name: "Walking", category: "Cardio", icon: "🚶", duration: "15–30 min", intensity: "Low", location: "Outdoor", goal: "Weight management", description: "A simple way to stay active every day." },
-
-
-
+  { id: 5, name: "Swimming", category: "Sports", icon: "🏊", duration: "30–60 min", intensity: "Medium", location: "Pool", goal: "Fitness", description: "A full-body workout in the water." },
+  { id: 6, name: "Badminton", category: "Racquet Sports", icon: "🏸", duration: "30–60 min", intensity: "High", location: "Court", goal: "Social", description: "Play, compete, and meet new people." },
+  { id: 7, name: "Walking", category: "Cardio", icon: "🚶", duration: "15–30 min", intensity: "Low", location: "Outdoor", goal: "Wellness", description: "A simple way to stay active every day." },
   { id: 8, name: "Dance Fitness", category: "Mind & Body", icon: "💃", duration: "30–60 min", intensity: "Medium", location: "Indoor", goal: "Social", description: "Move to the beat and enjoy a fun workout." },
-
-
-
+  { id: 9, name: "Pickleball", category: "Racquet Sports", icon: "🏓", duration: "30–60 min", intensity: "Medium", location: "Court", goal: "Fun", description: "Enjoy a fast-paced paddle sport." },
+  { id: 10, name: "Paddle Ball", category: "Racquet Sports", icon: "🏓", duration: "30–60 min", intensity: "Medium", location: "Court", goal: "Fun", description: "Play a paddle-based court game." },
+  { id: 11, name: "Padel", category: "Racquet Sports", icon: "🎾", duration: "45–60 min", intensity: "Medium", location: "Court", goal: "Fitness", description: "Play this social racquet sport." },
+  { id: 12, name: "Tennis", category: "Racquet Sports", icon: "🎾", duration: "45–60 min", intensity: "High", location: "Court", goal: "Fitness", description: "Improve agility and coordination." },
+  { id: 13, name: "Table Tennis", category: "Racquet Sports", icon: "🏓", duration: "30–45 min", intensity: "Medium", location: "Indoor", goal: "Fun", description: "Test your reflexes and precision." },
+  { id: 14, name: "Squash", category: "Racquet Sports", icon: "🎾", duration: "30–45 min", intensity: "High", location: "Court", goal: "Fitness", description: "Build speed and stamina." },
+  { id: 15, name: "Racquetball", category: "Racquet Sports", icon: "🎾", duration: "30–45 min", intensity: "High", location: "Court", goal: "Fitness", description: "Play a quick and energetic court sport." },
+  { id: 16, name: "Basketball", category: "Team Sports", icon: "🏀", duration: "45–60 min", intensity: "High", location: "Court", goal: "Fitness", description: "Find a team and hit the court." },
+  { id: 17, name: "Football", category: "Team Sports", icon: "⚽", duration: "45–90 min", intensity: "High", location: "Outdoor", goal: "Fun", description: "Find teammates for your next match." },
+  { id: 18, name: "Cricket", category: "Team Sports", icon: "🏏", duration: "60–120 min", intensity: "Medium", location: "Ground", goal: "Fun", description: "Gather a team for a cricket match." },
+  { id: 19, name: "Volleyball", category: "Team Sports", icon: "🏐", duration: "45–60 min", intensity: "High", location: "Court", goal: "Fitness", description: "Team up for a volleyball game." },
+  { id: 20, name: "Hockey", category: "Team Sports", icon: "🏑", duration: "45–60 min", intensity: "High", location: "Ground", goal: "Fitness", description: "Find teammates and get playing." },
+  { id: 21, name: "Rugby", category: "Team Sports", icon: "🏉", duration: "60–80 min", intensity: "High", location: "Ground", goal: "Fitness", description: "Play a team sport built around teamwork." },
+  { id: 22, name: "Baseball", category: "Team Sports", icon: "⚾", duration: "60–120 min", intensity: "Medium", location: "Ground", goal: "Fun", description: "Find players for your next game." },
+  { id: 23, name: "American Football", category: "Team Sports", icon: "🏈", duration: "60 min", intensity: "High", location: "Ground", goal: "Fitness", description: "Build a team and play together." },
+  { id: 24, name: "Handball", category: "Team Sports", icon: "🤾", duration: "45–60 min", intensity: "High", location: "Court", goal: "Fitness", description: "Combine speed, passing, and teamwork." },
+  { id: 25, name: "Futsal", category: "Team Sports", icon: "⚽", duration: "30–60 min", intensity: "High", location: "Indoor", goal: "Fun", description: "Play fast-paced indoor football." },
+  { id: 26, name: "Hiking", category: "Outdoor", icon: "🥾", duration: "60–180 min", intensity: "Medium", location: "Trail", goal: "Wellness", description: "Explore trails with an activity partner." },
+  { id: 27, name: "Trekking", category: "Outdoor", icon: "🏔️", duration: "2+ hours", intensity: "High", location: "Trail", goal: "Endurance", description: "Plan an outdoor adventure together." },
+  { id: 28, name: "Rock Climbing", category: "Outdoor", icon: "🧗", duration: "45–90 min", intensity: "High", location: "Climbing Wall", goal: "Strength", description: "Challenge yourself and build strength." },
+  { id: 29, name: "Golf", category: "Outdoor", icon: "⛳", duration: "60–180 min", intensity: "Low", location: "Golf Course", goal: "Fun", description: "Find a partner for a round of golf." },
+  { id: 30, name: "Skating", category: "Outdoor", icon: "⛸️", duration: "30–60 min", intensity: "Medium", location: "Rink", goal: "Fitness", description: "Practice balance and movement." },
+  { id: 31, name: "Skateboarding", category: "Outdoor", icon: "🛹", duration: "30–60 min", intensity: "High", location: "Skate Park", goal: "Fun", description: "Practice your skills at a skate park." },
+  { id: 32, name: "Surfing", category: "Water Sports", icon: "🏄", duration: "45–90 min", intensity: "High", location: "Beach", goal: "Fitness", description: "Catch waves and enjoy the outdoors." },
+  { id: 33, name: "Rowing", category: "Water Sports", icon: "🚣", duration: "30–60 min", intensity: "High", location: "Water", goal: "Endurance", description: "Build endurance on the water." },
+  { id: 34, name: "CrossFit", category: "Fitness", icon: "💪", duration: "30–60 min", intensity: "High", location: "Gym", goal: "Strength", description: "Mix strength and conditioning workouts." },
+  { id: 35, name: "Calisthenics", category: "Fitness", icon: "🤸", duration: "30–60 min", intensity: "High", location: "Gym", goal: "Strength", description: "Train using bodyweight exercises." },
+  { id: 36, name: "Pilates", category: "Mind & Body", icon: "🧘", duration: "30–60 min", intensity: "Medium", location: "Indoor", goal: "Flexibility", description: "Improve core strength and mobility." },
+  { id: 37, name: "Boxing", category: "Combat Sports", icon: "🥊", duration: "30–60 min", intensity: "High", location: "Gym", goal: "Fitness", description: "Build fitness with boxing drills." },
+  { id: 38, name: "Kickboxing", category: "Combat Sports", icon: "🥊", duration: "30–60 min", intensity: "High", location: "Gym", goal: "Fitness", description: "Train coordination and conditioning." },
+  { id: 39, name: "MMA", category: "Combat Sports", icon: "🥋", duration: "45–60 min", intensity: "High", location: "Gym", goal: "Fitness", description: "Train mixed martial arts skills." },
+  { id: 40, name: "Martial Arts", category: "Combat Sports", icon: "🥋", duration: "30–60 min", intensity: "High", location: "Indoor", goal: "Fitness", description: "Practice technique and discipline." },
+  { id: 41, name: "Zumba", category: "Fitness", icon: "💃", duration: "30–60 min", intensity: "Medium", location: "Indoor", goal: "Fitness", description: "Enjoy a dance-based fitness class." },
+  { id: 42, name: "Athletics", category: "Sports", icon: "🏅", duration: "30–60 min", intensity: "High", location: "Track", goal: "Endurance", description: "Train for track and field activities." },
+  { id: 43, name: "Jump Rope", category: "Cardio", icon: "🪢", duration: "15–30 min", intensity: "High", location: "Indoor", goal: "Fitness", description: "Improve stamina and coordination." },
 ];
 
 
@@ -98,26 +106,9 @@ const avatarColors = [
 
 
 
-const MATCH_WEIGHTS = {
-  sports: 25,
-  goals: 20,
-  availability: 15,
-  level: 10,
-  frequency: 10,
-  lookingFor: 10,
-  personality: 10,
-};
+const MATCH_WEIGHTS = { sports: 25, goals: 20, availability: 15, level: 10, frequency: 10, activity: 10, personality: 10 };
 
 const LEVEL_RANK = { Beginner: 1, Intermediate: 2, Advanced: 3, Competitive: 4 };
-
-const FREQUENCY_RANK = {
-  "Once a week": 1,
-  "1–2 times a week": 1,
-  "2–3 times a week": 2,
-  "3–4 times a week": 3,
-  "4–5 times a week": 4,
-  "5+ times a week": 5,
-};
 
 const normalizeList = (value) => Array.isArray(value) ? value.map((item) => String(item).trim().toLowerCase()).filter(Boolean) : [];
 
@@ -131,54 +122,27 @@ const overlapRatio = (first, second) => {
   return union ? matches / union : 0;
 };
 
-const calculateFrequencyScore = (first, second) => {
-  if (!first || !second) return 0;
-  const a = FREQUENCY_RANK[first] ?? FREQUENCY_RANK[String(first).trim()];
-  const b = FREQUENCY_RANK[second] ?? FREQUENCY_RANK[String(second).trim()];
-  if (!a || !b) return first === second ? 1 : 0;
-  const difference = Math.abs(a - b);
-  return difference === 0 ? 1 : difference === 1 ? 0.65 : difference === 2 ? 0.3 : 0;
-};
-
 const calculateCompatibility = (currentUser, partner) => {
   if (!currentUser || !partner) return { score: 0, breakdown: {}, reasons: [] };
 
-  // The score follows the TryFit product specification exactly:
-  // Sports 25% + Goals 20% + Workout times/days 15% + Level 10%
-  // + Frequency 10% + Looking for 10% + Personality 10% = 100%.
   const sportsScore = overlapRatio(currentUser.sports, partner.sports);
   const goalsScore = overlapRatio(currentUser.goals, partner.goals);
-
-  const currentTimes = currentUser.preferred_times?.length
-    ? currentUser.preferred_times
-    : currentUser.availability
-      ? [currentUser.availability]
-      : [];
-  const partnerTimes = partner.preferred_times?.length
-    ? partner.preferred_times
-    : partner.availability
-      ? [partner.availability]
-      : [];
-
-  const timeScore = overlapRatio(currentTimes, partnerTimes);
-  const dayScore = overlapRatio(currentUser.preferred_days, partner.preferred_days);
-  const availabilityScore = currentUser.preferred_days?.length && partner.preferred_days?.length
-    ? (timeScore + dayScore) / 2
-    : timeScore;
+  const currentTimes = currentUser.preferred_times?.length ? currentUser.preferred_times : currentUser.availability ? [currentUser.availability] : [];
+  const partnerTimes = partner.preferred_times?.length ? partner.preferred_times : partner.availability ? [partner.availability] : [];
+  const availabilityScore = overlapRatio(currentTimes, partnerTimes);
 
   const currentLevel = LEVEL_RANK[currentUser.level] || 0;
   const partnerLevel = LEVEL_RANK[partner.level] || 0;
   let levelScore = 0;
   if (currentLevel && partnerLevel) {
     const difference = Math.abs(currentLevel - partnerLevel);
-    levelScore = difference === 0 ? 1 : difference === 1 ? 0.7 : difference === 2 ? 0.4 : 0.15;
+    levelScore = difference === 0 ? 1 : difference === 1 ? 0.7 : 0.3;
   }
 
-  const frequencyScore = calculateFrequencyScore(
-    currentUser.workout_frequency,
-    partner.workout_frequency
-  );
-  const lookingForScore = overlapRatio(currentUser.looking_for, partner.looking_for);
+  const frequencyScore = currentUser.workout_frequency && partner.workout_frequency && currentUser.workout_frequency === partner.workout_frequency ? 1 : 0;
+  const currentActivities = [...(currentUser.activity_preferences || []), currentUser.activity];
+  const partnerActivities = [...(partner.activity_preferences || []), partner.activity];
+  const activityScore = overlapRatio(currentActivities, partnerActivities);
   const personalityScore = overlapRatio(currentUser.personality, partner.personality);
 
   const breakdown = {
@@ -187,99 +151,24 @@ const calculateCompatibility = (currentUser, partner) => {
     availability: Math.round(availabilityScore * MATCH_WEIGHTS.availability),
     level: Math.round(levelScore * MATCH_WEIGHTS.level),
     frequency: Math.round(frequencyScore * MATCH_WEIGHTS.frequency),
-    lookingFor: Math.round(lookingForScore * MATCH_WEIGHTS.lookingFor),
+    activity: Math.round(activityScore * MATCH_WEIGHTS.activity),
     personality: Math.round(personalityScore * MATCH_WEIGHTS.personality),
   };
 
   const score = Math.min(100, Object.values(breakdown).reduce((total, value) => total + value, 0));
   const reasons = [];
-
   const commonSports = normalizeList(currentUser.sports).filter((sport) => normalizeList(partner.sports).includes(sport));
-  if (commonSports.length) reasons.push(`Both play ${commonSports.slice(0, 2).join(", ")}`);
-
+  if (commonSports.length) reasons.push(`Same sport: ${commonSports.slice(0, 2).join(", ")}`);
   const commonGoals = normalizeList(currentUser.goals).filter((goal) => normalizeList(partner.goals).includes(goal));
   if (commonGoals.length) reasons.push(`Shared goal: ${commonGoals[0]}`);
-
   const commonTimes = normalizeList(currentTimes).filter((time) => normalizeList(partnerTimes).includes(time));
   if (commonTimes.length) reasons.push(`Both prefer ${commonTimes[0]} workouts`);
-
-  const commonDays = normalizeList(currentUser.preferred_days).filter((day) => normalizeList(partner.preferred_days).includes(day));
-  if (commonDays.length) reasons.push(`Both are free on ${commonDays.slice(0, 2).join(" and ")}`);
-
-  if (currentLevel && partnerLevel) {
-    const difference = Math.abs(currentLevel - partnerLevel);
-    if (difference === 0) reasons.push(`Same fitness level: ${currentUser.level}`);
-    else if (difference === 1) reasons.push("Similar fitness level");
-  }
-
-  if (frequencyScore >= 0.65) reasons.push("Similar training frequency");
-
-  const commonLookingFor = normalizeList(currentUser.looking_for).filter((item) => normalizeList(partner.looking_for).includes(item));
-  if (commonLookingFor.length) reasons.push(`Both want a ${commonLookingFor[0].toLowerCase()}`);
-
+  if (currentUser.workout_frequency && currentUser.workout_frequency === partner.workout_frequency) reasons.push("Similar training frequency");
   const commonPersonality = normalizeList(currentUser.personality).filter((item) => normalizeList(partner.personality).includes(item));
   if (commonPersonality.length) reasons.push(`Similar vibe: ${commonPersonality[0]}`);
+  if (!reasons.length && currentUser.city && partner.city && currentUser.city === partner.city) reasons.push(`Both are in ${partner.city}`);
 
-  if (!reasons.length && currentUser.city && partner.city && currentUser.city === partner.city) {
-    reasons.push(`Both are in ${partner.city}`);
-  }
-
-  return {
-    score,
-    breakdown,
-    reasons: reasons.slice(0, 4),
-  };
-};
-
-const DEFAULT_PROFILE_PROMPTS = [
-  { question: "My current fitness goal is...", answer: "" },
-  { question: "The sport I could play all day is...", answer: "" },
-  { question: "My ideal workout partner is...", answer: "" },
-  { question: "Convince me to try your favourite sport.", answer: "" },
-  { question: "One activity I want to try...", answer: "" },
-];
-
-const createProfileForm = (user = {}) => ({
-  name: user.name || "",
-  age: user.age ?? "",
-  gender: user.gender || "",
-  city: user.city || "",
-  height_cm: user.height_cm ?? "",
-  profession: user.profession || "",
-  education: user.education || "",
-  hometown: user.hometown || "",
-  languages: Array.isArray(user.languages) ? user.languages : [],
-  phone_number: user.phone_number || "",
-  phone_verified: Boolean(user.phone_verified),
-  profile_photo: user.profile_photo || "",
-  additional_photos: Array.isArray(user.additional_photos) ? user.additional_photos : [],
-  fitness_video_url: user.fitness_video_url || "",
-  sports: Array.isArray(user.sports) ? user.sports : [],
-  goals: Array.isArray(user.goals) ? user.goals : [],
-  activity: user.activity || "",
-  activity_preferences: Array.isArray(user.activity_preferences) ? user.activity_preferences : [],
-  level: user.level || "Beginner",
-  workout_frequency: user.workout_frequency || "",
-  training_intensity: user.training_intensity || "",
-  preferred_days: Array.isArray(user.preferred_days) ? user.preferred_days : [],
-  preferred_times: Array.isArray(user.preferred_times) ? user.preferred_times : [],
-  availability: user.availability || "Flexible",
-  personality: Array.isArray(user.personality) ? user.personality : [],
-  looking_for: Array.isArray(user.looking_for) ? user.looking_for : [],
-  preferred_age_min: user.preferred_age_min ?? 18,
-  preferred_age_max: user.preferred_age_max ?? 60,
-  preferred_distance_km: user.preferred_distance_km ?? 25,
-  bio: user.bio || "",
-  prompts: Array.isArray(user.prompts) && user.prompts.length
-    ? user.prompts.map((prompt) => ({ question: prompt?.question || "", answer: prompt?.answer || "" }))
-    : DEFAULT_PROFILE_PROMPTS.map((prompt) => ({ ...prompt })),
-});
-
-const toggleProfileListValue = (list, value) => {
-  const current = Array.isArray(list) ? list : [];
-  return current.includes(value)
-    ? current.filter((item) => item !== value)
-    : [...current, value];
+  return { score, breakdown, reasons: reasons.slice(0, 4) };
 };
 
 function App() {
@@ -374,7 +263,6 @@ function App() {
   const [chatLoading, setChatLoading] = useState(false);
   const [sendingMessage, setSendingMessage] = useState(false);
   const [blockedUserIds, setBlockedUserIds] = useState([]);
-  const [passedUserIds, setPassedUserIds] = useState([]);
   const [profileViewUser, setProfileViewUser] = useState(null);
   const [showReportModal, setShowReportModal] = useState(false);
   const [reportReason, setReportReason] = useState("Spam or fake profile");
@@ -383,7 +271,33 @@ function App() {
 
   const [isEditingProfile, setIsEditingProfile] = useState(false);
   const [profileSaving, setProfileSaving] = useState(false);
-  const [profileForm, setProfileForm] = useState(createProfileForm());
+  const [profileForm, setProfileForm] = useState({
+    name: "",
+    age: "",
+    gender: "",
+    city: "",
+    profile_photo: "",
+    sports: [],
+    goals: [],
+    activity: "",
+    activity_preferences: [],
+    level: "",
+    workout_frequency: "",
+    training_intensity: "",
+    preferred_days: [],
+    preferred_times: [],
+    availability: "",
+    personality: [],
+    looking_for: [],
+    bio: "",
+    prompts: [
+      { question: "My current fitness goal is...", answer: "" },
+      { question: "The sport I could play all day is...", answer: "" },
+      { question: "My ideal workout partner is...", answer: "" },
+      { question: "Convince me to try your favourite sport.", answer: "" },
+      { question: "One activity I want to try...", answer: "" },
+    ],
+  });
 
 
 
@@ -566,7 +480,34 @@ function App() {
 
   useEffect(() => {
     if (!currentUser) return;
-    setProfileForm(createProfileForm(currentUser));
+
+    setProfileForm({
+      name: currentUser.name || "",
+      age: currentUser.age ?? "",
+      gender: currentUser.gender || "",
+      city: currentUser.city || "",
+      profile_photo: currentUser.profile_photo || "",
+      sports: currentUser.sports || [],
+      goals: currentUser.goals || [],
+      activity: currentUser.activity || "",
+      activity_preferences: currentUser.activity_preferences || [],
+      level: currentUser.level || "",
+      workout_frequency: currentUser.workout_frequency || "",
+      training_intensity: currentUser.training_intensity || "",
+      preferred_days: currentUser.preferred_days || [],
+      preferred_times: currentUser.preferred_times || [],
+      availability: currentUser.availability || "",
+      personality: currentUser.personality || [],
+      looking_for: currentUser.looking_for || [],
+      bio: currentUser.bio || "",
+      prompts: currentUser.prompts?.length > 0 ? currentUser.prompts : [
+        { question: "My current fitness goal is...", answer: "" },
+        { question: "The sport I could play all day is...", answer: "" },
+        { question: "My ideal workout partner is...", answer: "" },
+        { question: "Convince me to try your favourite sport.", answer: "" },
+        { question: "One activity I want to try...", answer: "" },
+      ],
+    });
   }, [currentUser]);
 
   const handleProfileChange = (field, value) => {
@@ -589,50 +530,15 @@ function App() {
       return;
     }
 
-    const age = profileForm.age === "" ? 18 : Number(profileForm.age);
-    const height = profileForm.height_cm === "" ? null : Number(profileForm.height_cm);
-    const preferredAgeMin = Number(profileForm.preferred_age_min);
-    const preferredAgeMax = Number(profileForm.preferred_age_max);
-    const preferredDistance = Number(profileForm.preferred_distance_km);
-
-    if (!Number.isFinite(age) || age < 16 || age > 100) {
-      setNotice("Age must be between 16 and 100.");
-      return;
-    }
-
-    if (height !== null && (!Number.isFinite(height) || height < 100 || height > 250)) {
-      setNotice("Height must be between 100 cm and 250 cm.");
-      return;
-    }
-
-    if (preferredAgeMin < 16 || preferredAgeMax > 100 || preferredAgeMin > preferredAgeMax) {
-      setNotice("Please enter a valid preferred age range.");
-      return;
-    }
-
-    if (preferredDistance < 1 || preferredDistance > 200) {
-      setNotice("Preferred distance must be between 1 and 200 km.");
-      return;
-    }
-
     setProfileSaving(true);
 
     try {
       const payload = {
         name: profileForm.name.trim(),
-        age,
+        age: profileForm.age === "" ? 18 : Number(profileForm.age),
         gender: profileForm.gender.trim(),
         city: profileForm.city.trim(),
-        height_cm: height,
-        profession: profileForm.profession.trim(),
-        education: profileForm.education.trim(),
-        hometown: profileForm.hometown.trim(),
-        languages: profileForm.languages.filter(Boolean),
-        phone_number: profileForm.phone_number.trim(),
-        phone_verified: profileForm.phone_verified,
         profile_photo: profileForm.profile_photo.trim(),
-        additional_photos: profileForm.additional_photos.filter(Boolean),
-        fitness_video_url: profileForm.fitness_video_url.trim(),
         sports: profileForm.sports,
         goals: profileForm.goals,
         activity: profileForm.activity,
@@ -645,16 +551,8 @@ function App() {
         availability: profileForm.availability,
         personality: profileForm.personality,
         looking_for: profileForm.looking_for,
-        preferred_age_min: preferredAgeMin,
-        preferred_age_max: preferredAgeMax,
-        preferred_distance_km: preferredDistance,
         bio: profileForm.bio.trim(),
-        prompts: profileForm.prompts
-          .map((prompt) => ({
-            question: String(prompt?.question || "").trim(),
-            answer: String(prompt?.answer || "").trim(),
-          }))
-          .filter((prompt) => prompt.question),
+        prompts: profileForm.prompts,
       };
 
       const result = await api.updateUser(currentUserId, payload);
@@ -675,13 +573,6 @@ function App() {
         )
       );
 
-      if (googleUser?.id && String(googleUser.id) === String(currentUserId)) {
-        const updatedGoogleUser = { ...googleUser, ...normalizedUser };
-        setGoogleUser(updatedGoogleUser);
-        localStorage.setItem("tryfit_google_user", JSON.stringify(updatedGoogleUser));
-      }
-
-      setProfileForm(createProfileForm(normalizedUser));
       setIsEditingProfile(false);
       setNotice("Profile updated successfully! 💚");
     } catch (error) {
@@ -695,39 +586,7 @@ function App() {
 
 
 
-  const loadPassedUsers = (userId) => {
-    if (!userId) {
-      setPassedUserIds([]);
-      return;
-    }
-    const storageKey = `tryfit_passed_users_${String(userId)}`;
-    try {
-      const stored = JSON.parse(localStorage.getItem(storageKey) || "[]");
-      setPassedUserIds(Array.isArray(stored) ? stored.map((id) => String(id)) : []);
-    } catch (error) {
-      console.error("Passed users loading failed:", error);
-      setPassedUserIds([]);
-    }
-  };
 
-  useEffect(() => {
-    loadPassedUsers(currentUserId);
-  }, [currentUserId]);
-
-  const handlePassUser = (partner) => {
-    if (!currentUserId || !partner?.id) return;
-    const passedId = String(partner.id);
-    setPassedUserIds((previous) => {
-      const updated = [...new Set([...previous, passedId])];
-      try {
-        localStorage.setItem(`tryfit_passed_users_${String(currentUserId)}`, JSON.stringify(updated));
-      } catch (error) {
-        console.error("Passed users save failed:", error);
-      }
-      return updated;
-    });
-    setNotice(`${partner.name || "Profile"} passed. We will keep them out of your Discover list.`);
-  };
 
 
   const partners = useMemo(() => {
@@ -743,7 +602,6 @@ function App() {
 
 
       .filter((user) => !blockedUserIds.includes(String(user.id)))
-      .filter((user) => !passedUserIds.includes(String(user.id)))
 .map((user, index) => ({
 
 
@@ -768,7 +626,7 @@ function App() {
 
 
 
-  }, [users, currentUserId, blockedUserIds, passedUserIds]);
+  }, [users, currentUserId]);
 
 
 
@@ -2392,6 +2250,13 @@ function App() {
 
 
 
+    const requestedCapacity = Number(gameCapacity);
+
+    if (!Number.isInteger(requestedCapacity) || requestedCapacity < 1 || requestedCapacity > 100) {
+      setNotice("Please enter a whole number of players between 1 and 100.");
+      return;
+    }
+
     if (!gameTitle.trim() || !gameLocation.trim() || !gameDate || !gameTime) {
 
 
@@ -2440,7 +2305,7 @@ function App() {
 
 
 
-        total: Number(gameCapacity),
+        total: requestedCapacity,
 
 
 
@@ -4073,7 +3938,7 @@ function App() {
                 onClick={() => setIsEditingProfile((value) => !value)}
                 disabled={!currentUser || usersLoading}
               >
-                {isEditingProfile ? "Close editor" : "✏️ Edit profile"}
+                {isEditingProfile ? "Close profile" : "✏️ Edit profile"}
               </button>
             </div>
 
@@ -4082,351 +3947,217 @@ function App() {
                 onSubmit={handleSaveProfile}
                 style={{
                   marginTop: "18px",
-                  padding: "24px",
-                  borderRadius: "22px",
+                  padding: "22px",
+                  borderRadius: "18px",
                   border: "1px solid #d5ded7",
                   background: "#f8fbf8",
                 }}
               >
-                <div style={{ marginBottom: "20px" }}>
+                <div style={{ marginBottom: "16px" }}>
                   <span className="section-kicker">YOUR PROFILE</span>
-                  <h3 style={{ margin: "6px 0 4px" }}>Complete your TryFit profile</h3>
+                  <h3 style={{ margin: "6px 0 4px" }}>Build your TryFit fitness profile</h3>
                   <p style={{ margin: 0, color: "#64736a" }}>
-                    Complete your profile so TryFit can show you better fitness partners and matches.
+                    Tell the community what you enjoy, what you are training for, and who you want to train with.
                   </p>
                 </div>
 
-                <div style={{ display: "grid", gap: "22px" }}>
-                  <section>
-                    <div style={{ marginBottom: "12px" }}>
-                      <strong style={{ fontSize: "16px" }}>👤 Basic information</strong>
-                      <p style={{ margin: "4px 0 0", color: "#718078", fontSize: "13px" }}>Your basic details and how the community sees you.</p>
-                    </div>
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(190px, 1fr))", gap: "14px" }}>
+                  <label style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
+                    Name
+                    <input value={profileForm.name} onChange={(e) => handleProfileChange("name", e.target.value)} placeholder="Your name" required />
+                  </label>
 
-                    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(190px, 1fr))", gap: "14px" }}>
-                      <label style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
-                        Name
-                        <input value={profileForm.name} onChange={(e) => handleProfileChange("name", e.target.value)} placeholder="Your name" required />
-                      </label>
+                  <label style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
+                    Age
+                    <input type="number" min="16" max="100" value={profileForm.age} onChange={(e) => handleProfileChange("age", e.target.value)} placeholder="Your age" required />
+                  </label>
 
-                      <label style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
-                        Email
-                        <input value={currentUser.email || ""} readOnly disabled title="Email cannot be changed here" />
-                      </label>
+                  <label style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
+                    Gender
+                    <select value={profileForm.gender} onChange={(e) => handleProfileChange("gender", e.target.value)}>
+                      <option value="">Select gender</option>
+                      <option value="Male">Male</option>
+                      <option value="Female">Female</option>
+                      <option value="Non-binary">Non-binary</option>
+                      <option value="Prefer not to say">Prefer not to say</option>
+                    </select>
+                  </label>
 
-                      <label style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
-                        Age
-                        <input type="number" min="16" max="100" value={profileForm.age} onChange={(e) => handleProfileChange("age", e.target.value)} placeholder="Your age" required />
-                      </label>
+                  <label style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
+                    City
+                    <input value={profileForm.city} onChange={(e) => handleProfileChange("city", e.target.value)} placeholder="e.g. Mumbai" required />
+                  </label>
 
-                      <label style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
-                        Gender
-                        <select value={profileForm.gender} onChange={(e) => handleProfileChange("gender", e.target.value)}>
-                          <option value="">Select gender</option>
-                          <option value="Male">Male</option>
-                          <option value="Female">Female</option>
-                          <option value="Non-binary">Non-binary</option>
-                          <option value="Prefer not to say">Prefer not to say</option>
-                        </select>
-                      </label>
+                  <label style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
+                    Profile photo URL
+                    <input value={profileForm.profile_photo} onChange={(e) => handleProfileChange("profile_photo", e.target.value)} placeholder="Optional image URL" />
+                  </label>
 
-                      <label style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
-                        City
-                        <input value={profileForm.city} onChange={(e) => handleProfileChange("city", e.target.value)} placeholder="e.g. Mumbai" required />
-                      </label>
+                  <label style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
+                    Primary activity
+                    <select value={profileForm.activity} onChange={(e) => handleProfileChange("activity", e.target.value)}>
+                      <option value="">Select activity</option>
+                      {activityList.map((activity) => (
+                        <option key={activity.id} value={activity.name}>{activity.name}</option>
+                      ))}
+                    </select>
+                  </label>
 
-                      <label style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
-                        Hometown
-                        <input value={profileForm.hometown} onChange={(e) => handleProfileChange("hometown", e.target.value)} placeholder="Where are you from?" />
-                      </label>
+                  <label style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
+                    Fitness level
+                    <select value={profileForm.level} onChange={(e) => handleProfileChange("level", e.target.value)}>
+                      <option value="">Select level</option>
+                      <option value="Beginner">Beginner</option>
+                      <option value="Intermediate">Intermediate</option>
+                      <option value="Advanced">Advanced</option>
+                      <option value="Competitive">Competitive</option>
+                    </select>
+                  </label>
 
-                      <label style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
-                        Height (cm)
-                        <input type="number" min="100" max="250" value={profileForm.height_cm} onChange={(e) => handleProfileChange("height_cm", e.target.value)} placeholder="e.g. 175" />
-                      </label>
+                  <label style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
+                    Workout frequency
+                    <select value={profileForm.workout_frequency} onChange={(e) => handleProfileChange("workout_frequency", e.target.value)}>
+                      <option value="">How often do you train?</option>
+                      <option value="1-2 times a week">1–2 times a week</option>
+                      <option value="3-4 times a week">3–4 times a week</option>
+                      <option value="5-6 times a week">5–6 times a week</option>
+                      <option value="Every day">Every day</option>
+                    </select>
+                  </label>
 
-                      <label style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
-                        Profession
-                        <input value={profileForm.profession} onChange={(e) => handleProfileChange("profession", e.target.value)} placeholder="Student, developer, designer..." />
-                      </label>
+                  <label style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
+                    Training intensity
+                    <select value={profileForm.training_intensity} onChange={(e) => handleProfileChange("training_intensity", e.target.value)}>
+                      <option value="">Select intensity</option>
+                      <option value="Low">Low</option>
+                      <option value="Moderate">Moderate</option>
+                      <option value="High">High</option>
+                      <option value="Very high">Very high</option>
+                    </select>
+                  </label>
 
-                      <label style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
-                        Education
-                        <input value={profileForm.education} onChange={(e) => handleProfileChange("education", e.target.value)} placeholder="College / degree" />
-                      </label>
-                    </div>
-
-                    <label style={{ display: "flex", flexDirection: "column", gap: "6px", marginTop: "14px" }}>
-                      Languages
-                      <input
-                        value={profileForm.languages.join(", ")}
-                        onChange={(e) => handleProfileChange("languages", e.target.value.split(",").map((item) => item.trim()).filter(Boolean))}
-                        placeholder="English, Hindi, Marathi"
-                      />
-                      <small style={{ color: "#718078" }}>Separate multiple languages with commas.</small>
-                    </label>
-                  </section>
-
-                  <section>
-                    <div style={{ marginBottom: "12px" }}>
-                      <strong style={{ fontSize: "16px" }}>📱 Contact & media</strong>
-                      <p style={{ margin: "4px 0 0", color: "#718078", fontSize: "13px" }}>Add contact and profile media information.</p>
-                    </div>
-
-                    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(190px, 1fr))", gap: "14px" }}>
-                      <label style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
-                        Phone number
-                        <input type="tel" value={profileForm.phone_number} onChange={(e) => handleProfileChange("phone_number", e.target.value)} placeholder="Your phone number" />
-                        <small style={{ color: "#718078" }}>
-                          {profileForm.phone_verified ? "✓ Phone verified" : "Phone not verified"}
-                        </small>
-                      </label>
-
-                      <label style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
-                        Profile photo URL
-                        <input value={profileForm.profile_photo} onChange={(e) => handleProfileChange("profile_photo", e.target.value)} placeholder="https://..." />
-                      </label>
-
-                      <label style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
-                        Fitness video URL
-                        <input value={profileForm.fitness_video_url} onChange={(e) => handleProfileChange("fitness_video_url", e.target.value)} placeholder="Optional video URL" />
-                      </label>
-                    </div>
-
-                    {profileForm.profile_photo && (
-                      <div style={{ marginTop: "14px", display: "flex", alignItems: "center", gap: "12px" }}>
-                        <img
-                          src={profileForm.profile_photo}
-                          alt="Profile preview"
-                          style={{ width: "72px", height: "72px", borderRadius: "18px", objectFit: "cover", border: "1px solid #d5ded7" }}
-                          onError={(event) => { event.currentTarget.style.display = "none"; }}
-                        />
-                        <span style={{ fontSize: "13px", color: "#718078" }}>Profile photo preview</span>
-                      </div>
-                    )}
-
-                    <label style={{ display: "flex", flexDirection: "column", gap: "6px", marginTop: "14px" }}>
-                      Additional photo URLs
-                      <textarea
-                        value={profileForm.additional_photos.join("\n")}
-                        onChange={(e) => handleProfileChange("additional_photos", e.target.value.split("\n").map((item) => item.trim()).filter(Boolean))}
-                        rows="3"
-                        placeholder="One image URL per line"
-                      />
-                    </label>
-                  </section>
-
-                  <section>
-                    <div style={{ marginBottom: "12px" }}>
-                      <strong style={{ fontSize: "16px" }}>🏋️ Fitness profile</strong>
-                      <p style={{ margin: "4px 0 0", color: "#718078", fontSize: "13px" }}>Tell us what you like to do and how you train.</p>
-                    </div>
-
-                    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(190px, 1fr))", gap: "14px" }}>
-                      <label style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
-                        Primary activity
-                        <select value={profileForm.activity} onChange={(e) => handleProfileChange("activity", e.target.value)}>
-                          <option value="">Select activity</option>
-                          {activityList.map((activity) => (
-                            <option key={activity.id} value={activity.name}>{activity.name}</option>
-                          ))}
-                        </select>
-                      </label>
-
-                      <label style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
-                        Fitness level
-                        <select value={profileForm.level} onChange={(e) => handleProfileChange("level", e.target.value)}>
-                          <option value="Beginner">Beginner</option>
-                          <option value="Intermediate">Intermediate</option>
-                          <option value="Advanced">Advanced</option>
-                          <option value="Competitive">Competitive</option>
-                        </select>
-                      </label>
-
-                      <label style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
-                        Workout frequency
-                        <select value={profileForm.workout_frequency} onChange={(e) => handleProfileChange("workout_frequency", e.target.value)}>
-                          <option value="">How often do you train?</option>
-                          <option value="1-2 times a week">1–2 times a week</option>
-                          <option value="3-4 times a week">3–4 times a week</option>
-                          <option value="5-6 times a week">5–6 times a week</option>
-                          <option value="Every day">Every day</option>
-                        </select>
-                      </label>
-
-                      <label style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
-                        Training intensity
-                        <select value={profileForm.training_intensity} onChange={(e) => handleProfileChange("training_intensity", e.target.value)}>
-                          <option value="">Select intensity</option>
-                          <option value="Low">Low</option>
-                          <option value="Moderate">Moderate</option>
-                          <option value="High">High</option>
-                          <option value="Very high">Very high</option>
-                        </select>
-                      </label>
-                    </div>
-
-                    {[
-                      ["Sports you enjoy", "sports", ["Gym", "Running", "Football", "Cricket", "Badminton", "Basketball", "Swimming", "Tennis", "Cycling", "Boxing", "Yoga", "CrossFit", "Hiking", "Table Tennis", "Volleyball", "Golf", "Dance"]],
-                      ["Fitness goals", "goals", ["Build muscle", "Lose weight", "Improve stamina", "Stay active", "Improve flexibility", "Train for competition", "Have fun", "Meet people"]],
-                      ["Activity preferences", "activity_preferences", ["Indoor", "Outdoor", "Gym", "Home", "Park", "Court", "Track", "Pool", "Group classes"]],
-                    ].map(([title, field, options]) => (
-                      <div key={field} style={{ marginTop: "18px" }}>
-                        <strong>{title}</strong>
-                        <div style={{ display: "flex", flexWrap: "wrap", gap: "8px", marginTop: "10px" }}>
-                          {options.map((item) => {
-                            const selected = profileForm[field].includes(item);
-                            return (
-                              <button
-                                type="button"
-                                key={item}
-                                className={selected ? "button button-primary" : "button button-connected"}
-                                onClick={() => handleProfileChange(field, toggleProfileListValue(profileForm[field], item))}
-                              >
-                                {selected ? "✓ " : ""}{item}
-                              </button>
-                            );
-                          })}
-                        </div>
-                      </div>
-                    ))}
-                  </section>
-
-                  <section>
-                    <div style={{ marginBottom: "12px" }}>
-                      <strong style={{ fontSize: "16px" }}>🗓️ Availability</strong>
-                      <p style={{ margin: "4px 0 0", color: "#718078", fontSize: "13px" }}>Choose when you usually want to work out.</p>
-                    </div>
-
-                    <label style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
-                      Availability
-                      <select value={profileForm.availability} onChange={(e) => handleProfileChange("availability", e.target.value)}>
-                        <option value="Flexible">Flexible</option>
-                        <option value="Morning">Morning</option>
-                        <option value="Afternoon">Afternoon</option>
-                        <option value="Evening">Evening</option>
-                        <option value="Night">Night</option>
-                        <option value="Weekends">Weekends</option>
-                      </select>
-                    </label>
-
-                    {[
-                      ["Preferred workout days", "preferred_days", ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]],
-                      ["Preferred workout times", "preferred_times", ["Morning", "Afternoon", "Evening", "Night"]],
-                    ].map(([title, field, options]) => (
-                      <div key={field} style={{ marginTop: "18px" }}>
-                        <strong>{title}</strong>
-                        <div style={{ display: "flex", flexWrap: "wrap", gap: "8px", marginTop: "10px" }}>
-                          {options.map((item) => {
-                            const selected = profileForm[field].includes(item);
-                            return (
-                              <button
-                                type="button"
-                                key={item}
-                                className={selected ? "button button-primary" : "button button-connected"}
-                                onClick={() => handleProfileChange(field, toggleProfileListValue(profileForm[field], item))}
-                              >
-                                {selected ? "✓ " : ""}{item}
-                              </button>
-                            );
-                          })}
-                        </div>
-                      </div>
-                    ))}
-                  </section>
-
-                  <section>
-                    <div style={{ marginBottom: "12px" }}>
-                      <strong style={{ fontSize: "16px" }}>🤝 Matching preferences</strong>
-                      <p style={{ margin: "4px 0 0", color: "#718078", fontSize: "13px" }}>These preferences help TryFit find compatible partners.</p>
-                    </div>
-
-                    {[
-                      ["What are you looking for?", "looking_for", ["Workout partner", "Sports partner", "Running partner", "Competition partner", "Accountability partner", "Try new activities"]],
-                      ["Fitness personality", "personality", ["Competitive", "Disciplined", "Casual", "Fun / Social", "Goal-oriented", "Chill", "Competition-focused"]],
-                    ].map(([title, field, options]) => (
-                      <div key={field} style={{ marginTop: "14px" }}>
-                        <strong>{title}</strong>
-                        <div style={{ display: "flex", flexWrap: "wrap", gap: "8px", marginTop: "10px" }}>
-                          {options.map((item) => {
-                            const selected = profileForm[field].includes(item);
-                            return (
-                              <button
-                                type="button"
-                                key={item}
-                                className={selected ? "button button-primary" : "button button-connected"}
-                                onClick={() => handleProfileChange(field, toggleProfileListValue(profileForm[field], item))}
-                              >
-                                {selected ? "✓ " : ""}{item}
-                              </button>
-                            );
-                          })}
-                        </div>
-                      </div>
-                    ))}
-
-                    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: "14px", marginTop: "18px" }}>
-                      <label style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
-                        Preferred age — minimum
-                        <input type="number" min="16" max="100" value={profileForm.preferred_age_min} onChange={(e) => handleProfileChange("preferred_age_min", e.target.value)} />
-                      </label>
-
-                      <label style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
-                        Preferred age — maximum
-                        <input type="number" min="16" max="100" value={profileForm.preferred_age_max} onChange={(e) => handleProfileChange("preferred_age_max", e.target.value)} />
-                      </label>
-
-                      <label style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
-                        Preferred distance (km)
-                        <input type="number" min="1" max="200" value={profileForm.preferred_distance_km} onChange={(e) => handleProfileChange("preferred_distance_km", e.target.value)} />
-                      </label>
-                    </div>
-                  </section>
-
-                  <section>
-                    <div style={{ marginBottom: "12px" }}>
-                      <strong style={{ fontSize: "16px" }}>✍️ About you</strong>
-                      <p style={{ margin: "4px 0 0", color: "#718078", fontSize: "13px" }}>Add a short bio and answer a few fitness prompts.</p>
-                    </div>
-
-                    <label style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
-                      Bio
-                      <textarea
-                        value={profileForm.bio}
-                        onChange={(e) => handleProfileChange("bio", e.target.value)}
-                        placeholder="Tell the TryFit community a little about yourself..."
-                        rows="5"
-                        maxLength="500"
-                      />
-                      <small style={{ color: "#718078", textAlign: "right" }}>{profileForm.bio.length}/500</small>
-                    </label>
-
-                    <div style={{ marginTop: "16px" }}>
-                      <strong>Fitness prompts</strong>
-                      <div style={{ display: "grid", gap: "12px", marginTop: "10px" }}>
-                        {profileForm.prompts.map((prompt, index) => (
-                          <label key={`${prompt.question}-${index}`} style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
-                            {prompt.question}
-                            <input
-                              value={prompt.answer}
-                              onChange={(e) => {
-                                const updatedPrompts = [...profileForm.prompts];
-                                updatedPrompts[index] = { ...updatedPrompts[index], answer: e.target.value };
-                                handleProfileChange("prompts", updatedPrompts);
-                              }}
-                              placeholder="Write your answer..."
-                              maxLength="180"
-                            />
-                          </label>
-                        ))}
-                      </div>
-                    </div>
-                  </section>
+                  <label style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
+                    Availability
+                    <select value={profileForm.availability} onChange={(e) => handleProfileChange("availability", e.target.value)}>
+                      <option value="">Select availability</option>
+                      <option value="Morning">Morning</option>
+                      <option value="Afternoon">Afternoon</option>
+                      <option value="Evening">Evening</option>
+                      <option value="Night">Night</option>
+                      <option value="Weekends">Weekends</option>
+                      <option value="Flexible">Flexible</option>
+                    </select>
+                  </label>
                 </div>
 
-                <div style={{ display: "flex", gap: "10px", marginTop: "22px", paddingTop: "18px", borderTop: "1px solid #d5ded7", flexWrap: "wrap" }}>
+                <div style={{ marginTop: "20px" }}>
+                  <strong>Sports you enjoy</strong>
+                  <div style={{ display: "flex", flexWrap: "wrap", gap: "8px", marginTop: "10px" }}>
+                    {["Gym", "Running", "Walking", "Strength Training", "Football", "Cricket", "Basketball", "Volleyball", "Badminton", "Pickleball", "Paddle Ball", "Padel", "Tennis", "Table Tennis", "Squash", "Racquetball", "Swimming", "Cycling", "Hockey", "Rugby", "Baseball", "American Football", "Handball", "Futsal", "Boxing", "Kickboxing", "MMA", "Martial Arts", "Yoga", "Pilates", "CrossFit", "Calisthenics", "Hiking", "Trekking", "Rock Climbing", "Golf", "Skating", "Skateboarding", "Surfing", "Rowing", "Athletics", "Jump Rope", "Dance Fitness", "Zumba"].map((sport) => {
+                      const selected = profileForm.sports.includes(sport);
+                      return (
+                        <button type="button" key={sport} className={selected ? "button button-primary" : "button button-connected"} onClick={() => handleProfileChange("sports", selected ? profileForm.sports.filter((item) => item !== sport) : [...profileForm.sports, sport])}>
+                          {sport}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                <div style={{ marginTop: "20px" }}>
+                  <strong>Fitness goals</strong>
+                  <div style={{ display: "flex", flexWrap: "wrap", gap: "8px", marginTop: "10px" }}>
+                    {["Build muscle", "Lose weight", "Improve stamina", "Stay active", "Improve flexibility", "Train for competition", "Have fun", "Meet people"].map((item) => {
+                      const selected = profileForm.goals.includes(item);
+                      return (
+                        <button type="button" key={item} className={selected ? "button button-primary" : "button button-connected"} onClick={() => handleProfileChange("goals", selected ? profileForm.goals.filter((goal) => goal !== item) : [...profileForm.goals, item])}>
+                          {item}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                <div style={{ marginTop: "20px" }}>
+                  <strong>Preferred workout days</strong>
+                  <div style={{ display: "flex", flexWrap: "wrap", gap: "8px", marginTop: "10px" }}>
+                    {["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"].map((day) => {
+                      const selected = profileForm.preferred_days.includes(day);
+                      return (
+                        <button type="button" key={day} className={selected ? "button button-primary" : "button button-connected"} onClick={() => handleProfileChange("preferred_days", selected ? profileForm.preferred_days.filter((item) => item !== day) : [...profileForm.preferred_days, day])}>
+                          {day}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                <div style={{ marginTop: "20px" }}>
+                  <strong>Preferred workout times</strong>
+                  <div style={{ display: "flex", flexWrap: "wrap", gap: "8px", marginTop: "10px" }}>
+                    {["Morning", "Afternoon", "Evening", "Night"].map((time) => {
+                      const selected = profileForm.preferred_times.includes(time);
+                      return (
+                        <button type="button" key={time} className={selected ? "button button-primary" : "button button-connected"} onClick={() => handleProfileChange("preferred_times", selected ? profileForm.preferred_times.filter((item) => item !== time) : [...profileForm.preferred_times, time])}>
+                          {time}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                <div style={{ marginTop: "20px" }}>
+                  <strong>What are you looking for?</strong>
+                  <div style={{ display: "flex", flexWrap: "wrap", gap: "8px", marginTop: "10px" }}>
+                    {["Workout partner", "Sports partner", "Running partner", "Competition partner", "Accountability partner", "Try new activities"].map((item) => {
+                      const selected = profileForm.looking_for.includes(item);
+                      return (
+                        <button type="button" key={item} className={selected ? "button button-primary" : "button button-connected"} onClick={() => handleProfileChange("looking_for", selected ? profileForm.looking_for.filter((value) => value !== item) : [...profileForm.looking_for, item])}>
+                          {item}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                <div style={{ marginTop: "20px" }}>
+                  <strong>Fitness personality</strong>
+                  <div style={{ display: "flex", flexWrap: "wrap", gap: "8px", marginTop: "10px" }}>
+                    {["Competitive", "Disciplined", "Casual", "Fun / Social", "Goal-oriented", "Chill", "Competition-focused"].map((item) => {
+                      const selected = profileForm.personality.includes(item);
+                      return (
+                        <button type="button" key={item} className={selected ? "button button-primary" : "button button-connected"} onClick={() => handleProfileChange("personality", selected ? profileForm.personality.filter((value) => value !== item) : [...profileForm.personality, item])}>
+                          {item}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                <div style={{ marginTop: "20px" }}>
+                  <strong>Fitness prompts</strong>
+                  <div style={{ display: "grid", gap: "12px", marginTop: "10px" }}>
+                    {profileForm.prompts.map((prompt, index) => (
+                      <label key={`${prompt.question}-${index}`} style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
+                        {prompt.question}
+                        <input value={prompt.answer} onChange={(e) => {
+                          const updatedPrompts = [...profileForm.prompts];
+                          updatedPrompts[index] = { ...updatedPrompts[index], answer: e.target.value };
+                          handleProfileChange("prompts", updatedPrompts);
+                        }} placeholder="Write your answer..." />
+                      </label>
+                    ))}
+                  </div>
+                </div>
+
+                <label style={{ display: "flex", flexDirection: "column", gap: "6px", marginTop: "20px" }}>
+                  Bio
+                  <textarea value={profileForm.bio} onChange={(e) => handleProfileChange("bio", e.target.value)} placeholder="Tell the TryFit community a little about yourself..." rows="4" />
+                </label>
+
+                <div style={{ display: "flex", gap: "10px", marginTop: "16px", flexWrap: "wrap" }}>
                   <button type="submit" className="button button-primary" disabled={profileSaving}>
-                    {profileSaving ? "Saving profile..." : "💾 Save profile"}
+                    {profileSaving ? "Saving..." : "💾 Save changes"}
                   </button>
 
                   <button
@@ -4434,7 +4165,33 @@ function App() {
                     className="button button-connected"
                     disabled={profileSaving}
                     onClick={() => {
-                      setProfileForm(createProfileForm(currentUser));
+                      setProfileForm({
+                        name: currentUser.name || "",
+                        age: currentUser.age ?? "",
+                        gender: currentUser.gender || "",
+                        city: currentUser.city || "",
+                        profile_photo: currentUser.profile_photo || "",
+                        sports: currentUser.sports || [],
+                        goals: currentUser.goals || [],
+                        activity: currentUser.activity || "",
+                        activity_preferences: currentUser.activity_preferences || [],
+                        level: currentUser.level || "",
+                        workout_frequency: currentUser.workout_frequency || "",
+                        training_intensity: currentUser.training_intensity || "",
+                        preferred_days: currentUser.preferred_days || [],
+                        preferred_times: currentUser.preferred_times || [],
+                        availability: currentUser.availability || "",
+                        personality: currentUser.personality || [],
+                        looking_for: currentUser.looking_for || [],
+                        bio: currentUser.bio || "",
+                        prompts: currentUser.prompts?.length > 0 ? currentUser.prompts : [
+                          { question: "My current fitness goal is...", answer: "" },
+                          { question: "The sport I could play all day is...", answer: "" },
+                          { question: "My ideal workout partner is...", answer: "" },
+                          { question: "Convince me to try your favourite sport.", answer: "" },
+                          { question: "One activity I want to try...", answer: "" },
+                        ],
+                      });
                       setIsEditingProfile(false);
                     }}
                   >
@@ -4775,15 +4532,6 @@ if (isAccepted) {
                     <div style={{ display: "flex", gap: "8px", flexWrap: "wrap", marginTop: "12px" }}>
                       <button type="button" className="button button-connected" onClick={() => handleOpenProfile(partner)}>
                         View profile
-                      </button>
-                      <button
-                        type="button"
-                        className="button button-connected"
-                        onClick={() => handlePassUser(partner)}
-                        disabled={busyPartner === partner.id}
-                        style={{ flex: 1 }}
-                      >
-                        ✕ Pass
                       </button>
                     </div>
 
@@ -5389,43 +5137,16 @@ if (isAccepted) {
 
 
 
-                  <select
-
-
-
+                  <input
+                    type="number"
+                    min="1"
+                    max="100"
+                    step="1"
                     value={gameCapacity}
-
-
-
                     onChange={(e) => setGameCapacity(e.target.value)}
-
-
-
-                  >
-
-
-
-                    <option value="2">2 players</option>
-
-
-
-                    <option value="4">4 players</option>
-
-
-
-                    <option value="6">6 players</option>
-
-
-
-                    <option value="8">8 players</option>
-
-
-
-                    <option value="10">10 players</option>
-
-
-
-                  </select>
+                    placeholder="Enter number of players"
+                    required
+                  />
 
 
 
