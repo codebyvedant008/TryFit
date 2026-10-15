@@ -1954,23 +1954,46 @@ function App() {
     loadBlockedUsers(currentUserId);
   }, [currentUserId]);
 
-  const matchedUsers = useMemo(() => {
-    const acceptedConnections = connections.filter(
-      (connection) =>
-        connection.status === "accepted" || connection.status === "connected"
-    );
+  
+const matchedUsers = useMemo(() => {
+  if (!currentUserId) return [];
 
-    return acceptedConnections
-      .map((connection) => {
-        const partnerId =
-          String(connection.sender_id) === String(currentUserId)
-            ? String(connection.receiver_id)
-            : String(connection.sender_id);
-        if (blockedUserIds.includes(partnerId)) return null;
-        return partners.find((partner) => String(partner.id) === partnerId);
-      })
-      .filter(Boolean);
-  }, [connections, currentUserId, partners]);
+  const myId = String(currentUserId);
+  const seenPartnerIds = new Set();
+
+  return connections
+    .filter((connection) => {
+      const isAccepted =
+        connection.status === "accepted" ||
+        connection.status === "connected";
+
+      // Only use accepted connections that belong to the logged-in user.
+      const involvesMe =
+        String(connection.sender_id) === myId ||
+        String(connection.receiver_id) === myId;
+
+      return isAccepted && involvesMe;
+    })
+    .map((connection) => {
+      const senderId = String(connection.sender_id);
+      const receiverId = String(connection.receiver_id);
+      const partnerId = senderId === myId ? receiverId : senderId;
+
+      // Never show the logged-in user as their own match, blocked users,
+      // or the same partner more than once when duplicate connections exist.
+      if (
+        !partnerId ||
+        partnerId === myId ||
+        blockedUserIds.includes(partnerId) ||
+        seenPartnerIds.has(partnerId)
+      ) return null;
+
+      seenPartnerIds.add(partnerId);
+      return partners.find((partner) => String(partner.id) === partnerId) || null;
+    })
+    .filter(Boolean);
+}, [connections, currentUserId, partners, blockedUserIds]);
+
 
   const selectedMatch = matchedUsers.find(
     (partner) => String(partner.id) === String(selectedMatchId)
@@ -4632,7 +4655,7 @@ function App() {
                       <div style={{ display: "grid", gap: "12px", marginTop: "10px" }}>
                         {profileForm.prompts.map((prompt, index) => (
                           <label key={`${prompt.question}-${index}`} style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
-                            {prompt.question}
+                            <span>{prompt.question} <span aria-hidden="true" style={{ color: "#e53935", fontWeight: 800 }}>*</span></span>
                             <input
                               value={prompt.answer}
                               onChange={(e) => {
@@ -5009,17 +5032,14 @@ if (isAccepted) {
 
 
 
-                    <div style={{ display: "flex", gap: "8px", flexWrap: "wrap", marginTop: "12px" }}>
-                      <button type="button" className="button button-connected" onClick={() => handleOpenProfile(partner)}>
+                    <div
+                      className="partner-card-actions"
+                      style={{ display: "flex", flexDirection: "column", gap: "10px", marginTop: "14px", width: "100%", position: "relative" }}
+                    >
+                      <button type="button" className="button button-connected" onClick={() => handleOpenProfile(partner)} style={{ display: "block", width: "100%", flex: "none", margin: 0, position: "relative" }}>
                         View profile
                       </button>
-                      <button
-                        type="button"
-                        className="button button-connected"
-                        onClick={() => handlePassUser(partner)}
-                        disabled={busyPartner === partner.id}
-                        style={{ flex: 1 }}
-                      >
+                      <button type="button" className="button button-connected" onClick={() => handlePassUser(partner)} disabled={busyPartner === partner.id} style={{ display: "block", width: "100%", flex: "none", margin: 0, position: "relative" }}>
                         ✕ Pass
                       </button>
                     </div>
@@ -5201,6 +5221,8 @@ if (isAccepted) {
                             : "button button-primary partner-button"
 
                         }
+
+                        style={{ display: "block", width: "100%", flex: "none", marginTop: "10px", position: "relative", clear: "both" }}
 
                         disabled={
 
